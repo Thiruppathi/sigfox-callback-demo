@@ -20,10 +20,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Nicolas Lesconnec",
+  "author": "Thiruppathi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicolsc/sigfox-callback-demo"
+    "url": "https://github.com/thiruppathi/sigfox-callback-demo"
   },
   "license": "ISC"
 }
