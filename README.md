@@ -81,7 +81,7 @@ You can set the following env vars to adjust your app behaviour :
 
 Access http://localhost:34000/ in your browser.
 
-Of course, there should be 0 message displayed 
+Of course, there should be 0 message displayed
 
 ###POST request
 
@@ -111,9 +111,9 @@ _Note:_ You can deploy this demo application wherever suited. Heroku is just a q
 
 ###One-click deploy
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/nicolsc/sigfox-callback-demo/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/Thiruppathi/sigfox-callback-demo/tree/master)
 
-###The command line way 
+###The command line way
 
 * Make sure you have installed the [Heroku Toolbelt](https://toolbelt.heroku.com/)
 * Create an application : `heroku apps:create {whatever name}`. Documentation [here](https://devcenter.heroku.com/articles/creating-apps)
@@ -140,4 +140,3 @@ All that remains to do is to set up your SIGFOX callback on [the SIGFOX backend]
   * Url syntax :   `http://{your URL}/sigfox?id={device}&time={time}&snr={snr}&station={station}&data={data}&avgSignal={avgSignal}&rssi={rssi}&lat={lat}&lng={lng}`
   * HTTP POST
   * _OK_
-  
