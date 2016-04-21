@@ -8,15 +8,15 @@ const dbUrl = process.env.DATABASE_URL || 'mongodb://localhost:27017/sigfox-call
 module.exports = {
   db : undefined,
   connect : function() {
-    this.db = mongo(dbUrl, ['calls']);
-    
+    this.db = mongo(dbUrl, ['keyAppMessages']);
+
     this.db.on('error', function(err){
       debug('DB Error - %s', err);
     });
     this.db.on('ready', function(){
       debug('DB ready');
     });
-    
+
     return;
   },
   insert: function(collectionName, data){
@@ -33,7 +33,7 @@ module.exports = {
   },
   /**
   * Find documents in a given collection
-  * 
+  *
   * @param {String} collectionName — name of the collection to look into
   * @param {Object} qry — The filter
   * @param {Object} options
@@ -49,7 +49,7 @@ module.exports = {
       const skip = options.skip || 0;
       delete options.sort;
       delete options.limit;
-      
+
       this.db[collectionName]
       .find(qry, options)
       .sort(sort)

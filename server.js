@@ -6,7 +6,7 @@ try{
   const localConfig = require('./config.local.js');
   for (let entry in localConfig){
     if (process.env[entry]){
-      console.log('%s found in process.env too, ignore the local config val\n\t env vars always have precedence', entry); 
+      console.log('%s found in process.env too, ignore the local config val\n\t env vars always have precedence', entry);
     }
     else{
       process.env[entry] = localConfig[entry];
@@ -14,7 +14,7 @@ try{
   }
 }
 catch(e){
- console.log('No local config found'); 
+ console.log('No local config found');
   console.log(e);
 }
 
@@ -52,7 +52,7 @@ app.get('/', function(req, res){
             res.json({entries:data});
         },
         html: function(){
-            res.render('sigfox-logs', {title:'SIGFOX messages', entries:data});        
+            res.render('sigfox-logs', {title:'NTT-KeyApp-1C0E0 Messages', entries:data});
         },
         default:function(){
             res.status(406).send({err:'Invalid Accept header. This method only handles html & json'});
@@ -79,12 +79,12 @@ app.post('/sigfox', requestLogger, function(req, res){
   debug('~~ POST request ~~');
   res.json({result:'♡'});
 });
-  
+
 
 
 server.on('error', function(err){
     debug('ERROR %s', err);
 });
 server.on('listening', function(){
- debug('Server listening on port %s', port); 
+ debug('Server listening on port %s', port);
 });

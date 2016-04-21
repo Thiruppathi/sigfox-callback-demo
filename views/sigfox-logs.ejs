@@ -31,14 +31,14 @@
                 </tr>
               </thead>
               <tbody>
-                
+
                 <% entries.forEach(function(entry){%>
                   <tr>
                     <td><%=entry.time ? moment(entry.time).fromNow() : 'N/A'%></td>
                     <td><%=entry.payload.id%></td>
                     <td><%=moment(entry.payload.time*1000).format()%></td>
                     <td><%=entry.payload.station%></td>
-                    <td><%=entry.payload.avgSignal%> dB</td>
+                    <td><%=entry.payload.avgSnr%> dB</td>
                     <td><%=entry.payload.rssi%> dBm</td>
                     <td><strong><%=entry.payload.data%></strong></td>
                   </tr>
